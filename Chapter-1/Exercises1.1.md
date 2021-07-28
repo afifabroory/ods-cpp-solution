@@ -14,8 +14,8 @@ PROCEDURE write-input(stack-input:StackADT)
     WRITE element                                          ; WRITE element to output
 ```
 **Note:** \
-This pseudocode are **not standard**. This pseudocode are created by myself. \
-This, pseudocode style are influenced from Mathematics, Textbook pseudocode, Pascal, Python, Assembly, SQL, VBA & Java
+This pseudocode is **not standard**. This pseudocode is created by myself. \
+That pseudocode style, are influenced from Mathematics, Textbook pseudocode, Pascal, Python, Assembly, SQL, VBA & Java
 
 ---
 
