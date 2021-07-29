@@ -14,7 +14,7 @@ PROCEDURE write-input(stack-input:StackADT)
   WHILE stack-input WHERE IS ¬NULL DO
     element ← stack-input.Pop()                            ; Pop {stack-input} and STORE to {element}
     WRITE element                                          ; WRITE element to output
-  END LOOP
+  END LOOP.
 END PROCEDURE.
 ```
 **Note:** \
