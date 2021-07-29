@@ -5,13 +5,17 @@
 ; Also, the Range of this function is StackADT, because it's returning Stack.          
 {String} -> {StackADT}                           
 FUNCTION read-input(text-file:String, n:Integer ← 0)       ; Second parameter default value are 0. And store it's as {n} 
-  WHILE text-file AS line WHERE line IS ¬EOF  DO           
+  WHILE text-file AS line WHERE line IS ¬EOF DO           
     StackADT.Push(line)                                    ; Push/Add {line} to Stack
+  END LOOP.
+END FUNCTION.
 
 PROCEDURE write-input(stack-input:StackADT)
   WHILE stack-input WHERE IS ¬NULL DO
     element ← stack-input.Pop()                            ; Pop {stack-input} and STORE to {element}
     WRITE element                                          ; WRITE element to output
+  END LOOP
+END PROCEDURE.
 ```
 **Note:** \
 This pseudocode is **not standard**. This pseudocode is created by myself. \
