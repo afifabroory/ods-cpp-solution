@@ -5,14 +5,15 @@ Implementation in pseudocode:
 ```
 ; The domain of this function is NULL, because this function doesn't take input.
 ; Also, the Range of this function is StackADT, because it's returning Stack.          
-{String} -> {StackADT}                           
-FUNCTION read-input(text-file:String)
+{I_FILE} -> {StackADT}                           
+FUNCTION read-input(text-file:I_FILE)
   DECLARE my-stack AS StackADT
   WHILE text-file AS line WHERE line IS ¬EOF DO           
     my-stack.Push(line)                                    ; Push/Add {line} to Stack
   END LOOP.
 END FUNCTION, RETURN my-stack.
 
+{StackADT} -> {void}
 PROCEDURE write-input(ByRef stack-input:StackADT)          ; Pass procedure parameter by address/reference
   WHILE stack-input WHERE IS ¬NULL DO
     element ← stack-input.Top()                            ; Top {stack-input} (return top element) and STORE to {element}
@@ -33,7 +34,8 @@ My Implementation: [C++](https://gist.github.com/afifabroory/e03c2179550c72828ea
 > Read the first 50 lines of input and then write them out in reverse order. Read the next 50 lines and then write them out in reverse order. Do this until there are no more lines left to read, at which point any remaining lines should be output in reverse order.
 In this pseudocode,
 ```
-PROCEDURE write-fifty-input()
+{I_FILE} -> {void}
+PROCEDURE write-fifty-input(text-file:I_FILE)
   counter ← 0
   DECLARE my-stack AS StackADT
   WHILE text-file AS line WHERE IS ¬EOF DO
