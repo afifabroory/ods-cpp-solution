@@ -4,7 +4,7 @@
 ; The domain of this function is NULL, because this function doesn't take input.
 ; Also, the Range of this function is StackADT, because it's returning Stack.          
 {String} -> {StackADT}                           
-FUNCTION read-input(text-file:String, n:Integer ← 0)       ; Second parameter default value are 0. And store it's as {n} 
+FUNCTION read-input(text-file:String)
   WHILE text-file AS line WHERE line IS ¬EOF DO           
     StackADT.Push(line)                                    ; Push/Add {line} to Stack
   END LOOP.
@@ -20,6 +20,9 @@ END PROCEDURE.
 **Note:** \
 This pseudocode is **not standard**. This pseudocode is created by myself. \
 That pseudocode style, are influenced from Mathematics, Textbook pseudocode, Pascal, Python, Assembly, SQL, VBA & Java
+
+My Implementation: [C++](https://gist.github.com/afifabroory/e03c2179550c72828ea40bd38d909e0e)
+
 
 ---
 
