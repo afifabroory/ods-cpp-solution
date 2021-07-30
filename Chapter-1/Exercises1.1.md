@@ -1,5 +1,7 @@
 ### Exercises 1.1 (1)
 > Read the input one line at a time and then write the lines out in reverse order, so that the last input line is printed first, then the second last input line, and so on.
+
+Implementation in pseudocode:
 ```
 ; The domain of this function is NULL, because this function doesn't take input.
 ; Also, the Range of this function is StackADT, because it's returning Stack.          
