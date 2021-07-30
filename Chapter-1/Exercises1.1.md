@@ -32,8 +32,7 @@ My Implementation: [C++](https://gist.github.com/afifabroory/e03c2179550c72828ea
 ---
 
 ### Exercuses 1.1 (2)
-> Read the first 50 lines of input and then write them out in reverse order. Read the next 50 lines and then write them out in reverse order. Do this until there are no more lines left to read, at which point any remaining lines should be output in reverse order.
-In this pseudocode,
+> Read the first 50 lines of input and then write them out in reverse order. Read the next 50 lines and then write them out in reverse order. Do this until there are no more lines left to read, at which point any remaining lines should be output in reverse order. 
 ```
 {I_FILE} -> {void}
 PROCEDURE write-fifty-input(text-file:I_FILE)
