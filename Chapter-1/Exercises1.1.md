@@ -7,24 +7,25 @@ Implementation in pseudocode:
 ; Also, the Range of this function is StackADT, because it's returning Stack.          
 {String} -> {StackADT}                           
 FUNCTION read-input(text-file:String)
+  DECLARE my-stack AS StackADT
   WHILE text-file AS line WHERE line IS ¬EOF DO           
-    StackADT.Push(line)                                    ; Push/Add {line} to Stack
+    my-stack.Push(line)                                    ; Push/Add {line} to Stack
   END LOOP.
-END FUNCTION.
+END FUNCTION, RETURN my-stack.
 
-PROCEDURE write-input(stack-input:StackADT)
+PROCEDURE write-input(ByRef stack-input:StackADT)          ; Pass procedure parameter by address/reference
   WHILE stack-input WHERE IS ¬NULL DO
-    element ← stack-input.Pop()                            ; Pop {stack-input} and STORE to {element}
+    element ← stack-input.Top()                            ; Top {stack-input} (return top element) and STORE to {element}
+    stack-input.Pop()                                      ; Pop (remove top element)
     WRITE element                                          ; WRITE element to output
   END LOOP.
 END PROCEDURE.
 ```
 **Note:** \
 This pseudocode is **not standard**. This pseudocode is created by myself. \
-That pseudocode style, are influenced from Mathematics, Textbook pseudocode, Pascal, Python, Assembly, SQL, VBA & Java
+That pseudocode style, are influenced from Mathematics, Textbook pseudocode, Pascal, Python, Assembly, SQL, VBA, C/C++ & Java
 
 My Implementation: [C++](https://gist.github.com/afifabroory/e03c2179550c72828ea40bd38d909e0e)
-
 
 ---
 
@@ -33,5 +34,16 @@ My Implementation: [C++](https://gist.github.com/afifabroory/e03c2179550c72828ea
 In this pseudocode,
 ```
 PROCEDURE write-fifty-input()
+  counter ← 0
+  DECLARE my-stack AS StackADT
   WHILE text-file AS line WHERE IS ¬EOF DO
+    IF counter = 50 then do
+      CALL write-input(my-stack)                 ; Call procedure write-input from previous pseudocode.
+      counter ← 0
+    ELSE IF
+      my-stack.Push(line)                        ; Push line-by-line to stack.
+      counter ← counter + 1
+    END IF.
+  END LOOP.
+ END PROCEDURE.
 ```
