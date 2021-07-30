@@ -24,7 +24,8 @@ END PROCEDURE.
 ```
 **Note:** \
 This pseudocode is **not standard**. This pseudocode is created by myself. \
-That pseudocode style, are influenced from Mathematics, Textbook pseudocode, Pascal, Python, Assembly, SQL, VBA, C/C++ & Java
+The pseudocode style, are influenced from Mathematics, Textbook pseudocode, Pascal, Python, Assembly, SQL, VBA, C/C++ & Java. \
+Sorry, if the pseudocode makes you dizzy.
 
 My Implementation: [C++](https://gist.github.com/afifabroory/e03c2179550c72828ea40bd38d909e0e)
 
