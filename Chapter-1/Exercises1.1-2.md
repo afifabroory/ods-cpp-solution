@@ -10,6 +10,9 @@ PROCEDURE read-fifty-input(text-file:I_FILE)
   WHILE text-file AS line WHERE IS ¬EOF DO
     IF counter = 50 THEN DO
       CALL write-input(my-stack)                 ; Call procedure write-input from Exercises 1.1 (1) pseudocode.
+                                                 ; write-input argument are pass by reference/address, which is
+                                                 ; it will remove all element in Stack, by Pop() operation.
+      my-stack.Push(line)
       counter ← 0
     ELSE IF
       my-stack.Push(line)                        ; Push line-by-line to stack.
