@@ -2,7 +2,7 @@
 > Read the first 50 lines of input and then write them out in reverse order. Read the next 50 lines and then write them out in reverse order. Do this until there are no more lines left to read, at which point any remaining lines should be output in reverse order. 
 ```
 {I_FILE} -> {void}
-PROCEDURE read-fifty-input(text-file:I_FILE)
+PROCEDURE read-fifty-input(ByRef text-file:I_FILE)
   
   counter ← 0
   DECLARE my-stack AS StackADT
@@ -26,3 +26,4 @@ PROCEDURE read-fifty-input(text-file:I_FILE)
   
  END PROCEDURE.
 ```
+My implementation: [C++](https://gist.github.com/afifabroory/e4be703c1240a2df186601420ca86dfe)
