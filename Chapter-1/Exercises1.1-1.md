@@ -7,19 +7,25 @@ Implementation in pseudocode:
 ; Also, the Range of this function is StackADT, because it's returning Stack.          
 {I_FILE} -> {StackADT}                           
 FUNCTION read-input(text-file:I_FILE)
+
   DECLARE my-stack AS StackADT
+  
   WHILE text-file AS line WHERE line IS ¬EOF DO           
     my-stack.Push(line)                                    ; Push/Add {line} to Stack
   END LOOP.
+  
 END FUNCTION, RETURN my-stack.
 
 {StackADT} -> {void}
 PROCEDURE write-input(ByRef stack-input:StackADT)          ; Pass procedure parameter by address/reference
+  
   WHILE stack-input WHERE IS ¬NULL DO
     element ← stack-input.Top()                            ; Top {stack-input} (return top element) and STORE to {element}
     stack-input.Pop()                                      ; Pop (remove top element)
-    WRITE element                                          ; WRITE element to output
+   
+   WRITE element                                          ; WRITE element to output
   END LOOP.
+  
 END PROCEDURE.
 ```
 **Note:** \
