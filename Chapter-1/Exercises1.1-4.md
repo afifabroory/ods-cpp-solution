@@ -16,3 +16,4 @@ PROCEDURE write-input(inputLine) DO
   END LOOP.
 END PROCEDURE.
 ```
+[C++](https://gist.github.com/afifabroory/47008ed10ea84361d5b3f064bd9b2863) Implementation
